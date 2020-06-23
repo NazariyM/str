@@ -46010,6 +46010,10 @@ var _vintagePopup = __webpack_require__(133);
 
 var _vintagePopup2 = _interopRequireDefault(_vintagePopup);
 
+var _scrollmagic = __webpack_require__(380);
+
+var _scrollmagic2 = _interopRequireDefault(_scrollmagic);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -46039,6 +46043,19 @@ var Popups = function () {
         closeBtnSelector: '.js-popup-close',
         lockScreenEl: 'body'
       });
+    }
+  }, {
+    key: 'openOnScroll',
+    value: function openOnScroll(triggerEl, popupId) {
+      this.scrollController = new _scrollmagic2.default.Controller();
+
+      this.scene = new _scrollmagic2.default.Scene({
+        triggerElement: triggerEl,
+        triggerHook: 0
+      }).on('enter', function () {
+        var modalEl = $('[data-popup-id=' + popupId + ']').data('popup');
+        modalEl.open();
+      }).addTo(this.scrollController);
     }
   }]);
 
@@ -61821,6 +61838,10 @@ var _DiscountPop = __webpack_require__(136);
 
 var _DiscountPop2 = _interopRequireDefault(_DiscountPop);
 
+var _Popup = __webpack_require__(354);
+
+var _Popup2 = _interopRequireDefault(_Popup);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -61862,6 +61883,11 @@ var PublicAPI = exports.PublicAPI = function () {
             }
          };
       }
+   }, {
+      key: 'openPopupOnScroll',
+      value: function openPopupOnScroll(triggerEl, popupId) {
+         _Popup2.default.openOnScroll(triggerEl, popupId);
+      }
    }]);
 
    return PublicAPI;
@@ -61872,13 +61898,16 @@ var PublicAPI = exports.PublicAPI = function () {
 
 exports.default = window.PublicAPI = PublicAPI;
 
-// PublicAPI.discountPopup().init('.what-program')
-// PublicAPI.discountPopup().init(null, true)
-// PublicAPI.discountPopup().success()
-// PublicAPI.discountPopup().close()
-// document.querySelector('.discount-pop__form-submit').addEventListener('click',  () => {
-//    PublicAPI.discountPopup().success()
-// })
+// discount pop-up
+/*
+PublicAPI.discountPopup().init('.what-program')
+PublicAPI.discountPopup().init(null, true)
+PublicAPI.discountPopup().success()
+PublicAPI.discountPopup().close()
+document.querySelector('.discount-pop__form-submit').addEventListener('click',  () => {
+   PublicAPI.discountPopup().success()
+})
+*/
 
 /***/ })
 /******/ ]);
