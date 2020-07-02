@@ -5,156 +5,563 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,300" rel="stylesheet" type="text/css">
   <style>
     * {
-      font-family: 'Roboto', sans-serif;
-      padding: 0;
-      margin: 0;
+          font-family: 'Roboto', sans-serif;
+          padding: 0;
+          margin: 0;
     }
-
+    
     svg {
-      display: inline-block;
-      vertical-align: middle;
+          display: inline-block;
+          vertical-align: middle;
     }
-
+    
     header {
-      text-align: center;
-      height: 96px;
-      border-bottom: 2px #ededed solid;
+          text-align: center;
+          height: 96px;
+          border-bottom: 2px #ededed solid;
     }
-
+    
     header svg {
-      height: 100%;
+          height: 100%;
     }
-
+    
     footer {
-      font-size: 12px;
-      color: #a5a5a8;
-      padding: 45px;
+          font-size: 12px;
+          color: #a5a5a8;
+          padding: 45px;
     }
-
+    
     .logo {
-      float: left;
+          float: left;
     }
-
+    
     .copyright {
-      float: right;
+          float: right;
     }
-
+    
     .content {
-      border-top: 2px #fff solid;
-      padding: 45px;
-      background: #ededed;
-      position: relative;
-      overflow: hidden;
+          border-top: 2px #fff solid;
+          padding: 45px;
+          background: #ededed;
+          position: relative;
+          overflow: hidden;
     }
-
+    
     .title {
-      font-size: 36px;
-      font-weight: 300;
-      line-height: 65px;
-      border-bottom: 1px #fff solid;
+          font-size: 36px;
+          font-weight: 300;
+          line-height: 65px;
+          border-bottom: 1px #fff solid;
     }
-
+    
     .pager {
-      width: 50%;
+          width: 50%;
     }
-
+    
     .page {
-      display: block;
-      overflow: hidden;
-      text-decoration: none;
-      margin-top: 30px;
+          display: block;
+          overflow: hidden;
+          text-decoration: none;
+          margin-top: 30px;
     }
-
+    
     .page .number {
-      float: left;
-      font-size: 13px;
-      color: #a5a5a8;
+          float: left;
+          font-size: 13px;
+          color: #a5a5a8;
     }
-
+    
     .page .name {
-      padding-left: 30px;
-      font-size: 14px;
-      color: #28292a;
-      margin-bottom: 5px;
+          padding-left: 30px;
+          font-size: 14px;
+          color: #28292a;
+          margin-bottom: 5px;
     }
-
+    
     .page .description {
-      padding-left: 30px;
-      font-size: 12px;
-      color: #636363;
+          padding-left: 30px;
+          font-size: 12px;
+          color: #636363;
     }
-
+    
     .click {
-      font-size: 12px;
-      color: #636363;
-      border: 2px solid #fff;
-      padding: 5px 10px;
-      display: inline-block;
-      margin-left: 30px;
-      margin-top: 10px;
+          font-size: 12px;
+          color: #636363;
+          border: 2px solid #fff;
+          padding: 5px 10px;
+          display: inline-block;
+          margin-left: 30px;
+          margin-top: 10px;
     }
-
-    .page:hover,
-    .page:hover .number,
-    .page:hover .name,
-    .page:hover .description {
-      color: #a5a5a8;
+    
+    .page:hover, .page:hover .number, .page:hover .name, .page:hover .description {
+          color: #a5a5a8;
     }
-
+    
     .window {
-      position: fixed;
-      width: 100%;
-      height: 100%;
-      right: 40px;
-      top: 50%;
-      transform: translateY(-50%) translateX(25%) scale(0.5);
+          position: fixed;
+          width: 100%;
+          height: 100%;
+          right: 40px;
+          top: 50%;
+          transform: translateY(-50%) translateX(25%) scale(0.5);
     }
-
+    
     .click:after {
-      content: 'показать';
+          content: 'показать';
     }
-
+    
     iframe {
-      width: 100%;
-      height: 100%;
-      border: 4px #fff solid;
-      background: #fff;
+          width: 100%;
+          height: 100%;
+          border: 4px #fff solid;
+          background: #fff;
     }
   </style>
   <script>
     var pager = [
-      ['home.html', '01', '', 'Home page'],
-      ['sign-up.html', '02', '', 'Sign Up page'],
-      ['login.html', '03', '', 'Login page'],
-      ['gym-landing.html', '04', '', 'WoW Body Gym'],
-      ['after-reg-page.html', '05', '', 'After registration page'],
-      ['settings.html', '05', '', 'Settings page (personal cab)'],
-      ['personal-data.html', '06', '', 'Personal data page (personal cab)'],
-      ['schedule.html', '07', '', 'Schedule page (personal cab)'],
-      ['training.html', '08', '', 'Training page (personal cab)'],
-      ['recipes.html', '09', '', 'Recipes page (personal cab)'],
-      ['nutrition.html', '10', '', 'Nutrition page (personal cab)'],
-      ['final-page_buy.html', '11', '', 'Final page buy program (personal cab)'],
-      ['final-page_data.html', '12', '', 'Final page personal data (personal cab)'],
-      ['promo-page.html', '13', '', 'Promo page'],
-      ['pop-ups.html', '14', '', 'Pop-ups examples page']
+       [
+          'new-home.html',
+          '00',
+          'New home',
+          'home (with another modification of packages section)'
+       ],
+       [
+          'main-home.html',
+          '00',
+          'Main home page',
+          'home page',
+       ],
+       [
+          'strong-home.html',
+          '00',
+          'Strong home page',
+          'home page'
+       ],
+       [
+          'gym-home.html',
+          '00',
+          'Gym home page',
+          'home page'
+       ],
+       [
+          '01_about_us_wbs.html',
+          '01',
+          '01_about_us_wbs',
+          'about us'
+       ],
+       [
+          '02_results_wbs.html',
+          '02',
+          '02_results_wbs',
+          'results'
+       ],
+       [
+          '03_price_wbs.html',
+          '03',
+          '03_price_wbs',
+          'price'
+       ],
+        [
+            '03_price_wbs-2.html',
+            '03',
+            '03_price_wbs 2',
+            'price'
+        ],
+       [
+          '04_shop_wbs.html',
+          '04',
+          '04_shop_wbs',
+          'shop'
+       ],
+       [
+          '04_thanks_wbs.html',
+          '04',
+          '04_thanks_wbs',
+          'thanks'
+       ],
+       [
+          '04_confirm_the_order_wbs.html',
+          '04',
+          '04_confirm_the_order_wbs',
+          'confirm_the_order'
+       ],
+       [
+          '04_confirm_the_order_2.html',
+          '04',
+          '04_confirm_the_order_2',
+          'confirm_the_order'
+       ],
+       [
+          '04_confirm_the_order_4.html',
+          '04',
+          '04_confirm_the_order_4',
+          'confirm_the_order_4'
+       ],
+       [
+          '05_item_wbs.html',
+          '05',
+          '05_item_wbs',
+          'item'
+       ],
+       [
+          '06_recommendations_wbs.html',
+          '06',
+          '06_recommendations_wbs',
+          'recommendations'
+       ],
+       [
+          '07_qa_wbs.html',
+          '07',
+          '07_qa_wbs',
+          'qa page'
+       ],
+       [
+          '09_calculator_wbs.html',
+          '09',
+          '09_calculator_wbs',
+          'calculator'
+       ],
+       [
+          '10_articles_wbs.html',
+          '10',
+          '10_articles_wbs',
+          'articles'
+       ],
+       [
+          '11_article_wbs.html',
+          '11',
+          '11_article_wbs',
+          'article'
+       ],
+       [
+          '12_login_wbs.html',
+          '12',
+          '12_login_wbs',
+          'login'
+       ],
+       [
+          '13_check_your_data_wbs.html',
+          '13',
+          '13_check_your_data_wbs',
+          'check your data'
+       ],
+       [
+          '15_registration_wbs.html',
+          '15',
+          '15_registration_wbs',
+          'registration'
+       ],
+       [
+          '16_email_confirmation_wbs.html',
+          '16',
+          '16_email_confirmation_wbs',
+          'email confirmation'
+       ],[
+          '17_first_entry_1.html',
+          '17',
+          '17_first_entry_1',
+          'stage 2'
+       ],[
+          '17_first_entry_2.html',
+          '17',
+          '17_first_entry_2',
+          'stage 2'
+       ], [
+          '17_first_entry_3.html',
+          '17',
+          '17_first_entry_3',
+          'stage 2'
+       ], [
+          '17_first_entry_4.html',
+          '17',
+          '17_first_entry_4',
+          'stage 2'
+       ], [
+          '17_first_entry_5.html',
+          '17',
+          '17_first_entry_5',
+          'stage 2'
+       ], [
+          '18_3_program_home.html',
+          '18',
+          '18_3_program_home',
+          'stage 2'
+       ], [
+          '18_4_program_home+notification.html',
+          '18',
+          '18_4_program_home+notification',
+          'stage 2'
+       ], [
+          '18_4_program_home+notification-close.html',
+          '18',
+          '18_4_program_home+notification-close',
+          'stage 2'
+       ], [
+          '18_4_program_home+notification-double.html',
+          '18',
+          '18_4_program_home+notification-double',
+          'stage 2'
+       ], [
+          '22_0_program_exercises.html',
+          '22',
+          '22_0_program_exercises',
+          'stage 2'
+       ], [
+          '22_1_exercises_final.html',
+          '22',
+          '22_1_exercises_final',
+          'stage 2'
+       ], [
+          '22_2_exercises_photo_done_train.html',
+          '22',
+          '22_2_exercises_photo_done_train',
+          'stage 2'
+       ], [
+          '24_recipes.html',
+          '24',
+          '24_recipes',
+          'stage 2'
+       ], [
+          '25_recipe.html',
+          '25',
+          '25_recipe',
+          'stage 2'
+       ], [
+          '26_nutrition_free_day.html',
+          '26',
+          '26_nutrition_free_day',
+          'stage 2'
+       ], [
+          '27_1_nutrition.html',
+          '27',
+          '27_1_nutrition',
+          'stage 2'
+       ], [
+          '28_info_notification.html',
+          '28',
+          '28_info_notification',
+          'stage 2'
+       ], [
+          '29_important.html',
+          '29',
+          '29_important',
+          'stage 2'
+       ], [
+          '31_article.html',
+          '31',
+          '31_article',
+          'stage 2'
+       ], [
+          '32_rules.html',
+          '32',
+          '32_rules',
+          'stage 2'
+       ], [
+          '33_1_settings.html',
+          '33',
+          '33_1_settings',
+          'stage 2'
+       ], [
+          '33_2_settings_empty.html',
+          '33',
+          '33_2_settings_empty',
+          'stage 2'
+       ], [
+          '35_1_payment.html',
+          '35',
+          '35_1_payment',
+          'stage 2'
+       ], [
+          '35_3_payment_promocode_already_accepted.html',
+          '35',
+          '35_3_payment_promocode_already_accepted',
+          'stage 2'
+       ], [
+          '35_4_payment_over.html',
+          '35',
+          '35_4_payment_over',
+          'stage 2'
+       ], [
+          '36_freeze_program.html',
+          '36',
+          '36_freeze_program',
+          'stage 2'
+       ], [
+          '37_unfreeze_program.html',
+          '37',
+          '37_unfreeze_program',
+          'stage 2'
+       ], [
+          '38_1_personal_data.html',
+          '38',
+          '38_1_personal_data',
+          'stage 2'
+       ], [
+          '38_2_personal_data.html',
+          '38',
+          '38_2_personal_data',
+          'stage 2'
+       ], [
+          '38_4_fourth_week.html',
+          '38',
+          '38_4_fourth_week',
+          'stage 2'
+       ], [
+          '38_6_report.html',
+          '38',
+          '38_6_report',
+          'stage 2'
+       ], [
+          '38_7_report_last.html',
+          '38',
+          '38_7_report_last',
+          'stage 2'
+       ], [
+          '38_8_report_sent.html',
+          '38',
+          '38_8_report_sent',
+          'stage 2'
+       ], [
+          '38_9_report_sent-2.html',
+          '38',
+          '38_9_report_sent-2',
+          'stage 2'
+       ], [
+          '44_1_program_final.html',
+          '44',
+          '44_1_program_final',
+          'stage 2'
+       ], [
+          '44_1_program_final_print.html',
+          '44',
+          '44_1_program_final_print',
+          'stage 2'
+       ], [
+          '44_1_program_final_print-2.html',
+          '44',
+          '44_1_program_final_print-2',
+          'stage 2'
+       ], [
+          '44_1_program_final_sharing.html',
+          '44',
+          '44_1_program_final_sharing',
+          'stage 2'
+       ], [
+          '44_4_program_over.html',
+          '44',
+          '44_4_program_over',
+          'stage 2'
+       ], [
+          '45_1_base_search.html',
+          '45',
+          '45_1_base_search',
+          ''
+       ], [
+          '45_2_base_found-articles.html',
+          '45',
+          '45_2_base_found-articles',
+          ''
+       ], [
+          '45_3_base_article.html',
+          '45',
+          '45_3_base_article',
+          ''
+       ], [
+           'lead-magnet_page.html',
+            '46',
+            'lead-magnet page',
+            ''
+        ], [
+            'lead-magnet_thanks-page.html',
+            '46',
+            'lead-magnet thanks page',
+            ''
+        ], [
+          'modals.html',
+          '00',
+          'modals',
+          'stage 2'
+       ], [
+          '404.html',
+          '00',
+          '404',
+          'stage 2'
+       ], [
+          'payment_done.html',
+          '00',
+          'payment_done',
+          'stage 2'
+       ], [
+          'payment_error.html',
+          '00',
+          'payment_error',
+          'stage 2'
+       ], [
+          'confirmation.html',
+          '00',
+          'confirmation',
+          'stage 2'
+       ], [
+          'confirmation-ok.html',
+          '00',
+          'confirmation-ok',
+          'stage 2'
+       ], [
+          'sales.html',
+          '00',
+          'sales',
+          'stage 2'
+       ], [
+          'sales-article.html',
+          '00',
+          'sales-article',
+          'stage 2'
+       ], [
+          'my-data.html',
+          '00',
+          'my data',
+          'stage 2'
+       ], [
+          'ui-components.html',
+          '00',
+          'ui components',
+          'stage 2'
+       ], [
+          'enter.html',
+          '',
+          'Entry page',
+          ''
+       ], [
+          'login-old.html',
+          '',
+          'Entry page for old users',
+          ''
+       ], [
+          'login-new.html',
+          '',
+          'Entry page for new users',
+          ''
+       ], [
+          'registration-new.html',
+          '',
+          'New Registration page',
+          ''
+       ]
     ];
   </script>
   <header>
     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 841.9 595.3" style="enable-background:new 0 0 841.9 595.3;" xml:space="preserve">
-      <g>
-        <polygon points="33.2,209.7 0,209.7 7.8,239.8 40.5,239.8 	" />
-        <rect x="148.9" y="209.7" width="33.7" height="175.9" />
-        <polygon points="300.6,314 300.2,314 253.4,209.7 216.6,209.7 216.6,385.6 247.3,385.6 247.3,272.1 247.8,272.1 299.3,385.6
-            331.4,385.6 331.4,209.7 300.6,209.7 	" />
-        <polygon points="465.4,209.7 353.3,209.7 353.3,239.4 392.6,239.4 392.6,385.6 426.1,385.6 426.1,239.4 465.4,239.4 	" />
-        <path d="M508.1,209.7l-43.6,175.9h32.4l9.4-37h46.5l8.5,37h32.1l-42.3-175.9H508.1z M512.5,318.9l16.6-71.1h0.5l16.3,71.1H512.5z" />
-        <path d="M664.5,237c12.2,0,20.4,7.3,20.4,30h33.7c-1.2-39.9-19.6-59.7-54.1-59.7c-32.6,0-55.6,15.5-55.6,58.9v62.9
-            c0,43.4,22.8,58.9,55.6,58.9c12.6,0,22.4-6.9,31.4-17.1l5.2,14.6h17.5v-90.2h-57.3v27.7h23.6v10.7c0,15.1-7.8,24.4-20.4,24.4
-            c-13.4,0-21.9-5.3-21.9-24.8v-71.6C642.5,242.3,651.1,237,664.5,237z" />
-        <polygon points="781,355.9 781,309.6 825.6,309.6 825.6,279.9 781,279.9 781,239.4 839.5,239.4 839.5,209.7 747.3,209.7
-            747.3,385.6 841.9,385.6 841.9,355.9 	" />
-        <polygon points="96.3,209.7 51.3,385.6 83.3,385.6 128.2,209.7 	" /> </g>
+          <g>
+                <polygon points="33.2,209.7 0,209.7 7.8,239.8 40.5,239.8 " />
+                <rect x="148.9" y="209.7" width="33.7" height="175.9" />
+                <polygon points="300.6,314 300.2,314 253.4,209.7 216.6,209.7 216.6,385.6 247.3,385.6 247.3,272.1 247.8,272.1 299.3,385.6 331.4,385.6 331.4,209.7 300.6,209.7 "/>
+                <polygon points="465.4,209.7 353.3,209.7 353.3,239.4 392.6,239.4 392.6,385.6 426.1,385.6 426.1,239.4 465.4,239.4 " />
+                <path d="M508.1,209.7l-43.6,175.9h32.4l9.4-37h46.5l8.5,37h32.1l-42.3-175.9H508.1z M512.5,318.9l16.6-71.1h0.5l16.3,71.1H512.5z" />
+                <path d="M664.5,237c12.2,0,20.4,7.3,20.4,30h33.7c-1.2-39.9-19.6-59.7-54.1-59.7c-32.6,0-55.6,15.5-55.6,58.9v62.9c0,43.4,22.8,58.9,55.6,58.9c12.6,0,22.4-6.9,31.4-17.1l5.2,14.6h17.5v-90.2h-57.3v27.7h23.6v10.7c0,15.1-7.8,24.4-20.4,24.4c-13.4,0-21.9-5.3-21.9-24.8v-71.6C642.5,242.3,651.1,237,664.5,237z" />
+                <polygon points="781,355.9 781,309.6 825.6,309.6 825.6,279.9 781,279.9 781,239.4 839.5,239.4 839.5,209.7 747.3,209.7 747.3,385.6 841.9,385.6 841.9,355.9 " />
+                <polygon points="96.3,209.7 51.3,385.6 83.3,385.6 128.2,209.7 	" />
+          </g>
     </svg>
   </header>
   <div class="content">
@@ -173,22 +580,20 @@
     </div>
     <div class="copyright">by Vintage, All Right Reserved. 2017</div>
   </footer>
-  <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+  <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
   <script>
-    $(document).ready(function()
-    {
-      var links = '';
-      for (var i = 0, length = pager.length; i < length; i++)
-      {
-        links += '<a class="page" href="' + pager[i][0] + '"><div class="number">' + pager[i][1] + '</div><div class="name">' + pager[i][2] + '</div><div class="description">' + pager[i][3] + '</div><div class="click"></div> </a>';
-      }
-      $('.pager').append(links);
-      $('.page .click').click(function()
-      {
-        url = $(this).parent().attr('href');
-        $('iframe').attr('src', url);
-        return false
-      });
+    $(document).ready(function () {
+       var links = '';
+       for (var i = 0, length = pager.length; i < length; i++) {
+          links += '<a class="page" href="' + pager[i][0] + '"><div class="number">' + pager[i][1] + '</div><div class="name">' + pager[i][2] + '</div><div class="description">' + pager[i][3] + '</div><div class="click"></div> </a>';
+       }
+       $('.pager').append(links);
+    
+       $('.page .click').click(function () {
+          url = $(this).parent().attr('href');
+          $('iframe').attr('src', url);
+          return false
+       });
     });
   </script>
 </html>
